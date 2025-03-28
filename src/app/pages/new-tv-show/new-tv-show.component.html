@@ -1,0 +1,44 @@
+<h1>Crear nuevo tv show</h1>
+ <form #form="ngForm" (ngSubmit)="createNewTvShow(form)">
+    <mat-form-field>
+        <mat-label>Nombre </mat-label>
+        <input name="name" required ngModel matInput>
+      </mat-form-field>
+    
+      <mat-form-field>
+        <mat-label>Descripcion</mat-label>
+        <textarea name="description" required ngModel matInput></textarea>
+      </mat-form-field>
+      
+      <mat-form-field>
+        <mat-label>Año</mat-label>
+        <input name="year" required ngModel matInput>
+      </mat-form-field>
+
+      <mat-form-field>
+        <mat-label>Numero de episodios</mat-label>
+        <input name="episodes" required ngModel matInput>
+      </mat-form-field>
+
+      <mat-form-field>
+        <mat-label>Genero</mat-label>
+        <input name="genre" required ngModel matInput>
+      </mat-form-field>
+
+      <mat-form-field>
+        <mat-label>Imagen</mat-label>
+        <input name="image" required ngModel matInput>
+      </mat-form-field>
+
+
+    
+      <button type="submit" mat-raised-button>Crear</button>
+
+       @if(!form.valid && form.submitted){
+        <div  style="color: red"> 
+            Datos incompletos
+          </div>
+      } 
+</form> 
+
+  

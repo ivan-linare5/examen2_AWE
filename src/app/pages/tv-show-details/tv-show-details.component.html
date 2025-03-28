@@ -1,0 +1,10 @@
+<p>Detalles del programa {{showName}}</p>
+
+<div *ngIf="show">
+    <h2>{{ show!.name }}</h2>
+    <img [src]="show!.image" [alt]="show!.name">
+    <p><strong>Descripcion:</strong> {{ show!.description }}</p>
+    <p><strong>Género:</strong> {{ show!.genre }}</p>
+    <p><strong>Año:</strong> {{ show!.year }}</p>
+    <p><strong>Episodios:</strong> {{ show!.episodes }}</p>
+  </div>
